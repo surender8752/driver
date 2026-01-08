@@ -1,7 +1,10 @@
 import axios from "axios";
 
-export default axios.create({
-  baseURL:"https://driverbackend-pi.vercel.app/"
+const api = axios.create({
+  baseURL: "https://driverbackend-pi.vercel.app/api",
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
-// http://localhost:5000/api
+export default api;
